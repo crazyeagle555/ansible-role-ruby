@@ -28,6 +28,10 @@
     dest: /etc/profile.d/rubygems.sh
     mode: 0644
 
+# Update gem version to 2.5.2
+- name: Update gem version
+  command: "gem update --system 2.5.2"    
+
 # Install Bundler and configured gems.
 - name: Install Bundler.
   gem: name=bundler state=present user_install=no
