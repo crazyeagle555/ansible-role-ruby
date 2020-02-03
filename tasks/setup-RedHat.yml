@@ -3,3 +3,11 @@
   yum:
     name: "{{ ruby_packages }}"
     state: present
+
+- name: Add RepoForge repository
+  yum_repository:
+    name: RHEL
+    description: EPEL YUM repo
+    baseurl: http://apt.sw.be/redhat/el7/en/$basearch/testing
+    gpgcheck: false
+  when: "ansible_os_family == 'RedHat'"
