@@ -10,4 +10,3 @@
     description: EPEL YUM repo
     baseurl: http://apt.sw.be/redhat/el7/en/$basearch/testing
     gpgcheck: false
-  when: "ansible_os_family == 'RedHat'"
